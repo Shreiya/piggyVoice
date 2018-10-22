@@ -6,12 +6,13 @@ const getSpeech = () => {
   let recognition = new SpeechRecognition();
   recognition.lang = 'en-US';
   recognition.start();
-  // recognition.continuous = true;
+  recognition.continuous = true;
   recognition.interimResults = true;
   console.log('started rec');
 
   recognition.onresult = event => {
     speechResult = event.results[0][0].transcript;
+    console.log(speechResult);
     generateMsg();
     //left is right
     //right is left
@@ -25,7 +26,7 @@ const getSpeech = () => {
       document.getElementById('block-' + piggieLocation).innerHTML = '';
       piggieLocation -= 19;
       document.getElementById('block-' + piggieLocation).innerHTML = '<div id="piggie" class="piggie"></div>';
-    } else if (speechResult.includes("up") && (piggieLocation + 19 <= 360) && (piggieLocation + 19 >= 0) && !document.getElementById('block-' + (piggieLocation + 19)).classList.contains('tree')) {
+    } else if (speechResult.includes("no") && (piggieLocation + 19 <= 360) && (piggieLocation + 19 >= 0) && !document.getElementById('block-' + (piggieLocation + 19)).classList.contains('tree')) {
       document.getElementById('block-' + piggieLocation).innerHTML = '';
       piggieLocation += 19;
       document.getElementById('block-' + piggieLocation).innerHTML = '<div id="piggie" class="piggie"></div>';
