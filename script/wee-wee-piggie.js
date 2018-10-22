@@ -6,7 +6,7 @@ const getSpeech = () => {
   let recognition = new SpeechRecognition();
   recognition.lang = 'en-US';
   recognition.start();
-  recognition.continuous = true;
+  // recognition.continuous = true;
   recognition.interimResults = true;
   console.log('started rec');
 
