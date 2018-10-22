@@ -18,19 +18,19 @@ const getSpeech = () => {
     //right is left
     //up is down
     //down is up
-    if (speechResult.includes("right") && (piggieLocation - 1 <= 360) && (piggieLocation - 1 >= 0) && !document.getElementById('block-' + (piggieLocation - 1)).classList.contains('tree')) {
+    if (speechResult.includes("bacon") && (piggieLocation - 1 <= 360) && (piggieLocation - 1 >= 0) && !document.getElementById('block-' + (piggieLocation - 1)).classList.contains('tree')) {
       document.getElementById('block-' + piggieLocation).innerHTML = '';
       piggieLocation -= 1;
       document.getElementById('block-' + piggieLocation).innerHTML = '<div id="piggie" class="piggie"></div>';
-    } else if (speechResult.includes("down") && (piggieLocation - 19 <= 360) && (piggieLocation - 19 >= 0) && !document.getElementById('block-' + (piggieLocation - 19)).classList.contains('tree')) {
+    } else if (speechResult.includes("ham") && (piggieLocation - 19 <= 360) && (piggieLocation - 19 >= 0) && !document.getElementById('block-' + (piggieLocation - 19)).classList.contains('tree')) {
       document.getElementById('block-' + piggieLocation).innerHTML = '';
       piggieLocation -= 19;
       document.getElementById('block-' + piggieLocation).innerHTML = '<div id="piggie" class="piggie"></div>';
-    } else if (speechResult.includes("no") && (piggieLocation + 19 <= 360) && (piggieLocation + 19 >= 0) && !document.getElementById('block-' + (piggieLocation + 19)).classList.contains('tree')) {
+    } else if (speechResult.includes("sausage") && (piggieLocation + 19 <= 360) && (piggieLocation + 19 >= 0) && !document.getElementById('block-' + (piggieLocation + 19)).classList.contains('tree')) {
       document.getElementById('block-' + piggieLocation).innerHTML = '';
       piggieLocation += 19;
       document.getElementById('block-' + piggieLocation).innerHTML = '<div id="piggie" class="piggie"></div>';
-    } else if (speechResult.includes("left") && (piggieLocation + 1 <= 360) && (piggieLocation + 1 >= 0) && !document.getElementById('block-' + (piggieLocation + 1)).classList.contains('tree')) {
+    } else if (speechResult.includes("chops") && (piggieLocation + 1 <= 360) && (piggieLocation + 1 >= 0) && !document.getElementById('block-' + (piggieLocation + 1)).classList.contains('tree')) {
       document.getElementById('block-' + piggieLocation).innerHTML = '';
       piggieLocation += 1;
       document.getElementById('block-' + piggieLocation).innerHTML = '<div id="piggie" class ="piggie"></div>';
